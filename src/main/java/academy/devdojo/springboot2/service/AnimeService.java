@@ -15,16 +15,13 @@ import java.util.List;
 @Service
 @RequiredArgsConstructor
 public class AnimeService {
-
     private final AnimeRepository animeRepository;
 
     public List<Anime> listAll(){
-
         return animeRepository.findAll();
     }
 
     public List<Anime> findByName(String name){
-
         return animeRepository.findByName(name);
     }
 

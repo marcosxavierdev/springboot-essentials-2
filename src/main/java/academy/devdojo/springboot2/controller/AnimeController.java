@@ -19,7 +19,6 @@ import java.util.List;
 @Log4j2
 @RequiredArgsConstructor
 public class AnimeController {
-
     private final DateUtil dateUtil;
     private final AnimeService animeService;
 
@@ -60,5 +59,4 @@ public class AnimeController {
         animeService.replace(animePutRequestBody);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
-
 }

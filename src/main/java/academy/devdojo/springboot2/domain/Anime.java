@@ -17,7 +17,6 @@ import javax.persistence.Id;
 @Data
 @Entity
 public class Anime {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @JsonProperty("id")
