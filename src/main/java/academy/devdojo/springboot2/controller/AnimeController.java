@@ -42,14 +42,14 @@ public class AnimeController {
     }
 
     @DeleteMapping(path = "/{id}")
-    public ResponseEntity<?> delete(@PathVariable Long id){
+    public ResponseEntity<Anime> delete(@PathVariable Long id){
         log.info("[Execute] delete in AnimeController at: " + dateUtil.formatLocalDateTimeToDatabaseStyle(LocalDateTime.now()));
         animeService.delete(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
     @PutMapping
-    public ResponseEntity<?> replace(@RequestBody AnimePutRequestBody animePutRequestBody){
+    public ResponseEntity<Anime> replace(@RequestBody AnimePutRequestBody animePutRequestBody){
         log.info("[Execute] replace in AnimeController at: " + dateUtil.formatLocalDateTimeToDatabaseStyle(LocalDateTime.now()));
         animeService.replace(animePutRequestBody);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
